@@ -111,16 +111,17 @@ frame_agregar_carga = tk.Frame(root)
 frame_agregar_carga.pack(side=tk.TOP, fill=tk.X)
 
 entry_x = tk.Entry(frame_agregar_carga)
-entry_x.pack(side=tk.LEFT)
+entry_x.pack(side=tk.TOP)
+
 entry_y = tk.Entry(frame_agregar_carga)
-entry_y.pack(side=tk.LEFT)
+entry_y.pack(side=tk.TOP)
 entry_z = tk.Entry(frame_agregar_carga)
-entry_z.pack(side=tk.LEFT)
+entry_z.pack(side=tk.TOP)
 entry_valor = tk.Entry(frame_agregar_carga)
-entry_valor.pack(side=tk.LEFT)
+entry_valor.pack(side=tk.TOP)
 
 btn_agregar = tk.Button(frame_agregar_carga, text="Agregar Carga", command=lambda: Agregar2D() if not modo_3D else AgregarCarga3D())
-btn_agregar.pack(side=tk.LEFT)
+btn_agregar.pack(side=tk.TOP)
 
 btn_reiniciar = tk.Button(root, text="Reiniciar", command=Reiniciar)
 btn_reiniciar.pack(side=tk.TOP)

@@ -28,7 +28,7 @@ def GraficarCampoElectrico2D(ax, plano, campo, cargas, escala=1, color='b'):
 
 def GraficarCampoElectricoEscalar2D(ax, plano, cargas, escala=1):
     # Crear una malla para el plano
-    X, Y = np.meshgrid(np.linspace(-10, 10, 20), np.linspace(-10, 10, 20))
+    X, Y = np.meshgrid(np.linspace(-10, 10, 100), np.linspace(-10, 10, 100))
     Z = np.zeros(X.shape)
 
     for i in range(X.shape[0]):
@@ -42,7 +42,7 @@ def GraficarCampoElectricoEscalar2D(ax, plano, cargas, escala=1):
                     campo = carga.val / (r_mag ** 2)
                     campo_total += campo
 
-            Z[i, j] = campo_total
+            Z[i, j] = campo_total * 10 
 
     # Normalizar Z para el mapeo de colores
     Z_normalized = (Z - np.min(Z)) / (np.max(Z) - np.min(Z))
