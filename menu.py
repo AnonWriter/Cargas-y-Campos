@@ -56,7 +56,7 @@ def AgregarCarga3D():
 
 def Actualizar3D():
     ax.clear()
-    espacio = RecorridoEspacio(-5, 5, -5, 5, -5, 5)
+    espacio = RecorridoEspacio(-4, 4, -4, 4, -4, 4)
     campo = CampoElectricoEspacio(espacio, cargas3D)
     if modo_vectorial:
         GraficarCampoElectrico3D(ax, espacio, campo, cargas3D, escala=0.5)

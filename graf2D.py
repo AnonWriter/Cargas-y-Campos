@@ -28,7 +28,7 @@ def GraficarCampoElectrico2D(ax, plano, campo, cargas, escala=1, color='b'):
 
 def GraficarCampoElectricoEscalar2D(ax, plano, cargas, escala=1):
     # Crear una malla para el plano
-    X, Y = np.meshgrid(np.linspace(-10, 10, 200), np.linspace(-10, 10, 200))
+    X, Y = np.meshgrid(np.linspace(-10, 10, 20), np.linspace(-10, 10, 20))
     Z = np.zeros(X.shape)
 
     for i in range(X.shape[0]):
