@@ -43,7 +43,8 @@ def RecorridoEspacio(x1, x2, y1, y2, z1, z2):
     return espacio
 
 def CampoElectricoPlano(plano, cargas2d):
-    k_e = 8.9875517873681764 #constante de coulumb escalada para accesibilidad
+    #k_e = 8.9875517873681764 #constante de coulumb escalada para accesibilidad
+    k_e = 1
     mcampo = 0 #magnitud del vector de campo
     campo = []
     for vector in plano:
