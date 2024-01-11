@@ -52,7 +52,7 @@ def GraficarCampoElectricoEscalar3D(ax, espacio, cargas, escala=1):
     Z_normalized = (Z - np.min(Z)) / (np.max(Z) - np.min(Z))
 
     # Usar el color para representar la magnitud del campo
-    surface = ax.plot_surface(X, Y, Z, facecolors=plt.cm.viridis(Z_normalized), alpha=0.5)
+    surface = ax.plot_surface(X, Y, Z, facecolors=plt.cm.viridis(Z_normalized), alpha=1)
 
     # Agregar puntos representando las cargas
     for carga in cargas:

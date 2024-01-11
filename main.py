@@ -93,6 +93,9 @@ def Reiniciar():
     else:
         Reiniciar2D()
 
+def Salir():
+    root.destroy()
+
 #interfaz
 
 modo_3D = True
@@ -110,13 +113,23 @@ canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 frame_agregar_carga = tk.Frame(root)
 frame_agregar_carga.pack(side=tk.TOP, fill=tk.X)
 
+label_x = tk.Label(frame_agregar_carga, text="X:")
+label_x.pack(side=tk.TOP)
 entry_x = tk.Entry(frame_agregar_carga)
 entry_x.pack(side=tk.TOP)
 
+label_y = tk.Label(frame_agregar_carga, text="Y:")
+label_y.pack(side=tk.TOP)
 entry_y = tk.Entry(frame_agregar_carga)
 entry_y.pack(side=tk.TOP)
+
+label_z = tk.Label(frame_agregar_carga, text="Z:")
+label_z.pack(side=tk.TOP)
 entry_z = tk.Entry(frame_agregar_carga)
 entry_z.pack(side=tk.TOP)
+
+label_q = tk.Label(frame_agregar_carga, text="q:")
+label_q.pack(side=tk.TOP)
 entry_valor = tk.Entry(frame_agregar_carga)
 entry_valor.pack(side=tk.TOP)
 
@@ -132,5 +145,8 @@ btn_cambiar_modo_visual.pack(side=tk.TOP)
 
 btn_cambiar_modo = tk.Button(root, text="Cambiar Modo Dimension", command=CambiarModo)
 btn_cambiar_modo.pack(side=tk.TOP)
+
+btn_salir = tk.Button(root, text="Salir", command=Salir)
+btn_salir.pack(side=tk.TOP)
 
 root.mainloop()
